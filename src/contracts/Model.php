@@ -13,4 +13,18 @@ abstract class Model extends Connection{
         return self::query("SELECT * FROM $table");
     }
 
+    public static function where($params=[]){
+        $query = "";
+        $i = 0;
+        $count = count($params);
+        foreach($params as $field => $value){
+            $operator = $i==$count-1 ?"AND" : "";
+            $query .= "WHERE $field=$value ";
+            $i++;
+        }
+        self::query($query);
+    }
+
+    // User::where(['name'=>'jack']);
+
 }
