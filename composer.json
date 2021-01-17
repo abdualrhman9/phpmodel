@@ -1,0 +1,23 @@
+{
+    "name": "vendor/phpmodel",
+    "description": "Model pack for php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "abdoalrhman abaker",
+            "email": "abdoalrhman9@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ModelPack\\":"src/",
+            "Database\\":"database/",
+            "Tests\\":"tests/"
+        }
+    },
+   
+    "require-dev": {
+        "phpunit/phpunit": "9"
+    }
+}
