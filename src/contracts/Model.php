@@ -19,7 +19,7 @@ abstract class Model extends Connection{
         $count = count($params);
         foreach($params as $field => $value){
             $operator = $i==$count-1 ?"AND" : "";
-            $query .= "WHERE $field=$value ";
+            $query .= "WHERE $field=$value $operator ";
             $i++;
         }
         self::query($query);
